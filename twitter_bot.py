@@ -32,3 +32,6 @@ try:
     print('New Tweet posted!')
 except Exception:
     print('Something went wrong. Have you already tweeted today?')
+    logs = open('logs.txt', 'a')
+    logs.write('Tweet with content "' + status + '" not posted at ' + str(datetime.datetime.now()) + '.\n')
+    logs.close()
