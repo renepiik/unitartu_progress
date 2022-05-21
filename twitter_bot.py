@@ -1,16 +1,22 @@
-import tweepy
+# import tweepy
 import datetime
 from dotenv import dotenv_values
+import date_scraper
 
+# config
 config = dotenv_values(".env")
 
+'''
 auth = tweepy.OAuthHandler(config['CONSUMER_KEY'], config['CONSUMER_SECRET'])
 auth.set_access_token(config['ACCESS_KEY'], config['ACCESS_SECRET'])
 api = tweepy.API(auth)
+'''
 
-semester_start = datetime.date(day=6, month=2, year=2021)
+# ongoing semester start and end times
+# UT does not provide any endpoint to get those dates easily so i have to resort to web crawling a page which might change at any time and fuck up this script, THANKS!
+
+semester_start, semester_end = date_scraper.main()
 today = datetime.date.today()
-semester_end = datetime.date(day=26, month=6, year=2021)
 
 # progress x/100
 semester_progress = round(((today - semester_start) * 100) / (semester_end - semester_start))
@@ -28,6 +34,7 @@ for i in range(15):
 status = progress_bar + '  ' + str(semester_progress) + '%'
 
 try:
+    print(status)
     api.update_status(status)
     print('New Tweet posted!')
 except Exception:
