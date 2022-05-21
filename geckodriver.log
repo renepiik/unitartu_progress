@@ -269,3 +269,29 @@ Read port: 39009
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1653120017290	geckodriver	INFO	Listening on 127.0.0.1:42813
+1653120017905	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "38183" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJussiW"
+1653120018643	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJussiW/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38183/devtools/browser/e8739e5a-2624-45d3-be26-62612f85865b
+1653120020711	Marionette	INFO	Listening on port 40899
+Read port: 40899
+1653120020849	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653120021744	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1653120024954	Marionette	INFO	Stopped listening on port 40899
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1653120201132	geckodriver	INFO	Listening on 127.0.0.1:59461
+1653120201743	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "38711" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileyLBpBl"
+1653120202534	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileyLBpBl/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38711/devtools/browser/c5586813-bfbf-4943-8666-72455016fbaf
+1653120204836	Marionette	INFO	Listening on port 35119
+Read port: 35119
+1653120204892	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653120205623	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1653120208457	Marionette	INFO	Stopped listening on port 35119
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
