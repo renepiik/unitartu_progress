@@ -19,8 +19,14 @@ today = datetime.date.today()
 # progress x/100
 semester_progress = round(((today - semester_start) * 100) / (semester_end - semester_start))
 
+message = ""
+
 if semester_progress > 100:
-    raise Exception("Semester is over!")
+    message = "semester on läbi!"
+elif semester_progress == 69:
+    message = "nice"
+elif semester_progress == 50:
+    message = "klaas on pooltühi"
 
 # convert it into y/15
 mapped_progress = round((semester_progress / 100) * 15)
@@ -33,6 +39,9 @@ for i in range(15):
         progress_bar = progress_bar + '░'
 
 status = progress_bar + '  ' + str(semester_progress) + '%'
+
+if len(message) != 0:
+    status = status + '\n' + message
 
 try:
     api.update_status(status)
